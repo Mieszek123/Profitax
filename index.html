@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Profitax – Biuro Rachunkowe Leszno</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 36 36'%3E%3Crect width='36' height='36' rx='9' fill='%231B4D8A'/%3E%3Ctext x='9' y='26' font-family='Georgia,serif' font-size='22' font-weight='700' fill='white'%3EP%3C/text%3E%3Ccircle cx='27' cy='10' r='3' fill='%237EC8F7'/%3E%3C/svg%3E"/>
+  <meta name="description" content="Profitax – biuro rachunkowe w Lesznie. Pełna księgowość, kadry i płace, doradztwo podatkowe."/>
+  <!-- SEO & Social -->
+<meta name="keywords" content="biuro rachunkowe Leszno, księgowość Leszno, kadry płace Leszno, doradztwo podatkowe Leszno, KPiR Leszno"/>
+<meta name="robots" content="index, follow"/>
+<link rel="canonical" href="http://profitax.eu/"/>
+<meta property="og:type" content="website"/>
+<meta property="og:url" content="http://profitax.eu/"/>
+<meta property="og:title" content="Profitax – Biuro Rachunkowe Leszno"/>
+<meta property="og:description" content="Kompleksowa obsługa księgowa dla firm i przedsiębiorców w Lesznie. Pełna księgowość, kadry, doradztwo podatkowe."/>
+<meta property="og:image" content="http://profitax.eu/og-image.jpg"/>
+<meta property="og:locale" content="pl_PL"/>
+<meta property="og:site_name" content="Profitax"/>
+<meta name="twitter:card" content="summary_large_image"/>
+
+  <!-- Schema.org – rich snippets w Google -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "AccountingService",
+    "name": "Profitax",
+    "description": "Kompleksowa obsługa księgowa dla firm i przedsiębiorców w Lesznie i okolicach.",
+    "url": "http://profitax.eu/",
+    "telephone": "+48501157264",
+    "email": "ZMIENIC",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "ul. Słowiańska 54",
+      "addressLocality": "Leszno",
+      "postalCode": "64-100",
+      "addressCountry": "PL"
+    },
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+        "opens": "07:00",
+        "closes": "15:00"
+      }
+    ],
+    "priceRange": "$$",
+    "areaServed": {
+      "@type": "City",
+      "name": "Leszno"
+    }
+  }
+  </script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet"/>
+	<!-- Start cookieyes banner -->
+	<script id="cookieyes" type="text/javascript" src="https://cdn-cookieyes.com/client_data/f38bfa5fed5541925798c15b84eb2d40/script.js"></script>
+	<!-- End cookieyes banner -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            navy:   '#0F2D5E',
+            blue:   '#1B4D8A',
+            sky:    '#2E80D8',
+            accent: '#F97316',
+            teal:   '#0EA5A0',
+            violet: '#7C3AED',
+            green:  '#16A34A',
+            gold:   '#D97706',
+            rose:   '#E11D48',
+            off:    '#F5F7FA',
+            border: '#E2E8F0',
+            text:   '#1E293B',
+            muted:  '#64748B',
+          },
+          fontFamily: {
+            sans: ['DM Sans', 'sans-serif'],
+          },
+        }
+      }
+    }
+  </script>
+  <style>
+    html { scroll-behavior: smooth; }
+    @keyframes pulse-dot {
+      0%,100%{box-shadow:0 0 0 3px rgba(74,222,128,.3);}
+      50%{box-shadow:0 0 0 7px rgba(74,222,128,.1);}
+    }
+    .dot-pulse { animation: pulse-dot 2s ease-in-out infinite; }
+    @keyframes fadeUp {
+      from { opacity:0; transform: translateY(28px); }
+      to   { opacity:1; transform: translateY(0); }
+    }
+    .fade-up { opacity:0; animation: fadeUp .65s ease forwards; }
+    .d1 { animation-delay:.1s; }
+    .d2 { animation-delay:.22s; }
+    .d3 { animation-delay:.34s; }
+    .d4 { animation-delay:.46s; }
+    .d5 { animation-delay:.58s; }
+
+    /* Nav underline hover */
+    .nav-link { position: relative; }
+    .nav-link::after {
+      content:''; position:absolute; bottom:-4px; left:0;
+      width:0; height:2px; background:#2E80D8;
+      border-radius:2px; transition:width .25s;
+    }
+    .nav-link:hover::after { width:100%; }
+
+    /* Service card color vars */
+    .card-blue   { --card-c:#2E80D8; --card-bg:#EFF6FF; }
+    .card-teal   { --card-c:#0EA5A0; --card-bg:#F0FDFB; }
+    .card-violet { --card-c:#7C3AED; --card-bg:#F5F3FF; }
+    .card-orange { --card-c:#F97316; --card-bg:#FFF7ED; }
+    .card-green  { --card-c:#16A34A; --card-bg:#F0FDF4; }
+    .card-gold   { --card-c:#D97706; --card-bg:#FFFBEB; }
+
+    .service-icon-wrap { background: var(--card-bg); }
+    .service-icon-wrap svg { color: var(--card-c); }
+    .service-card-top { background: var(--card-c); }
+    .service-arrow-link { color: var(--card-c); }
+
+    .service-card {
+      border-radius:20px; border:1.5px solid #E2E8F0;
+      background:#fff; padding:32px 28px;
+      position:relative; overflow:hidden;
+      transition: all .3s;
+    }
+    .service-card::before {
+      content:''; position:absolute;
+      top:0; left:0; right:0; height:3px;
+      background:var(--card-c);
+      border-radius:20px 20px 0 0;
+      opacity:0; transition:opacity .3s;
+    }
+    .service-card:hover {
+      transform:translateY(-6px);
+      box-shadow:0 20px 50px rgba(15,45,94,.1);
+      border-color:transparent;
+    }
+    .service-card:hover::before { opacity:1; }
+    .service-card:hover .service-icon-wrap { transform:scale(1.1) rotate(-4deg); }
+    .service-arrow-link { opacity:0; transform:translateX(-6px); transition: opacity .2s, transform .2s; display:inline-flex; align-items:center; gap:5px; font-size:13px; font-weight:600; margin-top:16px; }
+    .service-card:hover .service-arrow-link { opacity:1; transform:translateX(0); }
+
+    /* FAQ */
+    .faq-item { border-radius:14px; border:1.5px solid #E2E8F0; background:#fff; overflow:hidden; transition:border-color .2s; }
+    .faq-item.active { border-color:#2E80D8; }
+    .faq-answer { max-height:0; overflow:hidden; transition:max-height .35s ease, padding .25s; padding:0 24px; font-size:14px; color:#64748B; line-height:1.7; }
+    .faq-item.active .faq-answer { max-height:200px; padding:0 24px 20px; }
+    .faq-chevron { width:28px; height:28px; border-radius:8px; background:#F5F7FA; flex-shrink:0; display:flex; align-items:center; justify-content:center; transition:background .2s, transform .25s; }
+    .faq-item.active .faq-chevron { background:#2E80D8; transform:rotate(180deg); }
+    .faq-item.active .faq-chevron svg { stroke:#fff; }
+
+    /* Hamburger */
+    .hamburger span { display:block; width:22px; height:2px; background:#0F2D5E; border-radius:2px; transition:transform .25s, opacity .2s; }
+    .hamburger.open span:nth-child(1) { transform:translateY(7px) rotate(45deg); }
+    .hamburger.open span:nth-child(2) { opacity:0; transform:scaleX(0); }
+    .hamburger.open span:nth-child(3) { transform:translateY(-7px) rotate(-45deg); }
+    .mobile-menu { max-height:0; overflow:hidden; transition:max-height .35s ease, opacity .25s ease; opacity:0; }
+    .mobile-menu.open { max-height:500px; opacity:1; }
+  </style>
+</head>
+<body class="font-sans text-text bg-off leading-relaxed">
+
+<!-- NAVBAR -->
+<header>
+  <nav class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-border shadow-sm">
+    <div class="max-w-6xl mx-auto px-5 flex items-center justify-between h-[68px]">
+      <!-- Logo -->
+      <a href="#" class="flex items-center gap-2.5">
+        <div class="w-10 h-10 rounded-[10px] bg-gradient-to-br from-blue to-sky flex items-center justify-center text-white text-[22px] font-bold shadow-lg shadow-blue/30">P</div>
+        <div class="font-bold text-[17px] tracking-tight">Pro<span class="text-sky">fitax</span></div>
+      </a>
+      <!-- Links desktop -->
+      <div class="hidden md:flex items-center gap-8">
+        <a href="#uslugi" class="nav-link text-sm font-medium text-muted hover:text-navy transition-colors">Usługi</a>
+        <a href="#dlaczego" class="nav-link text-sm font-medium text-muted hover:text-navy transition-colors">Dlaczego my?</a>
+        <a href="#kontakt" class="nav-link text-sm font-medium text-muted hover:text-navy transition-colors">Kontakt</a>
+      </div>
+      <!-- CTA desktop -->
+      <div class="hidden md:flex items-center gap-3">
+        <span class="flex items-center gap-1.5 text-[13px] font-semibold text-muted">
+          <svg width="15" height="15" viewBox="0 0 15 15" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M3 2h2.5l1 2.5-1.5 1A7 7 0 008.5 10l1-1.5 2.5 1V12A9.5 9.5 0 013 2z"/></svg>
+          +48 655 204 102
+        </span>
+        <a href="#kontakt" class="inline-flex items-center gap-1.5 px-5 py-2.5 rounded-[10px] bg-gradient-to-br from-blue to-sky text-white text-sm font-semibold shadow-md shadow-blue/30 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-blue/40 transition-all">
+          Bezpłatna konsultacja
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 7h8M8 4l3 3-3 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+        </a>
+      </div>
+      <!-- Hamburger -->
+      <button class="hamburger md:hidden flex flex-col justify-center items-center gap-[5px] w-10 h-10 bg-transparent border-none cursor-pointer rounded-lg hover:bg-off transition-colors" id="hamburger" aria-label="Menu" onclick="toggleMenu()">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+  <!-- Mobile menu -->
+  <div class="mobile-menu bg-white border-b border-border" id="mobile-menu">
+    <div class="max-w-6xl mx-auto px-5 py-2 pb-4 flex flex-col gap-0.5">
+      <a href="#uslugi" onclick="closeMenu()" class="px-3 py-2.5 rounded-lg text-[15px] font-medium text-text hover:bg-blue-50 hover:text-sky transition-colors">Usługi</a>
+      <a href="#dlaczego" onclick="closeMenu()" class="px-3 py-2.5 rounded-lg text-[15px] font-medium text-text hover:bg-blue-50 hover:text-sky transition-colors">Dlaczego my?</a>
+      <a href="#kontakt" onclick="closeMenu()" class="px-3 py-2.5 rounded-lg text-[15px] font-medium text-text hover:bg-blue-50 hover:text-sky transition-colors">Kontakt</a>
+      <div class="h-px bg-border my-2"></div>
+      <a href="tel:+48655204102" class="text-[14px] text-muted px-3 py-2">📞 +48 655 204 102</a>
+      <a href="#kontakt" onclick="closeMenu()" class="inline-flex justify-center items-center gap-2 px-5 py-2.5 rounded-[10px] bg-gradient-to-br from-blue to-sky text-white text-sm font-semibold mt-1">Bezpłatna konsultacja</a>
+    </div>
+  </div>
+</header>
+
+
+<!-- HERO -->
+<section class="relative overflow-hidden min-h-[92vh] flex items-center">
+  <div class="absolute inset-0 z-0 bg-cover bg-center" style="background-image:url('https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1800&q=80')"></div>
+  <div class="absolute inset-0 z-10" style="background:linear-gradient(120deg,rgba(10,25,55,.88) 0%,rgba(15,45,94,.82) 45%,rgba(27,77,138,.55) 100%)"></div>
+  <div class="relative z-20 max-w-6xl mx-auto px-5 py-[100px] pb-20 w-full">
+    <!-- Badge -->
+    <div class="fade-up d1 inline-flex items-center gap-2 bg-white/10 border border-white/20 backdrop-blur-sm rounded-full px-3.5 py-1.5 mb-7">
+      <span class="dot-pulse w-2 h-2 rounded-full bg-green-400" style="box-shadow:0 0 0 3px rgba(74,222,128,.3)"></span>
+      <span class="text-[12px] font-semibold text-white/85 uppercase tracking-widest">Biuro rachunkowe · Leszno</span>
+    </div>
+    <!-- Heading -->
+    <h1 class="fade-up d2 font-sans text-white leading-[1.08] mb-6 max-w-[720px]" style="font-size:clamp(42px,6vw,76px)">
+      Finanse pod kontrolą,<br/>
+      <em class="text-[#7EC8F7] not-italic font-bold italic">Ty skupiasz się</em><br/>
+      na biznesie
+    </h1>
+    <p class="fade-up d3 text-white/75 max-w-[520px] mb-10" style="font-size:clamp(16px,2vw,19px);line-height:1.65">
+      Kompleksowa obsługa księgowa dla firm i przedsiębiorców w Lesznie i okolicach. Pełna księgowość, kadry, doradztwo podatkowe.
+    </p>
+    <!-- Buttons -->
+    <div class="fade-up d4 flex flex-wrap gap-3 mb-16">
+      <a href="#kontakt" class="inline-flex items-center gap-2 bg-accent text-white px-7 py-3.5 rounded-xl text-[15px] font-bold shadow-lg shadow-orange-500/40 hover:-translate-y-0.5 hover:shadow-xl hover:shadow-orange-500/50 transition-all">
+        Umów bezpłatną konsultację
+        <svg width="16" height="16" viewBox="0 0 14 14" fill="none"><path d="M3 7h8M8 4l3 3-3 3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+      </a>
+      <a href="#uslugi" class="inline-flex items-center gap-2 bg-white/10 border border-white/30 backdrop-blur-sm text-white px-7 py-3.5 rounded-xl text-[15px] font-semibold hover:bg-white/20 transition-all">
+        Sprawdź ofertę
+        <svg width="16" height="16" viewBox="0 0 14 14" fill="none"><path d="M7 3l4 4-4 4M3 7h8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+      </a>
+    </div>
+    <!-- Stats -->
+    <div class="fade-up d5 flex flex-wrap gap-0 border-t border-white/15 pt-9">
+      <div class="pr-10 mr-10 ">
+        <div class="font-sans text-white text-4xl leading-none">20<span class="text-[#7EC8F7]">+</span></div>
+        <div class="text-[13px] text-white/55 mt-1">lat doświadczenia</div>
+      </div>
+      <div class="pr-10 mr-10 ">
+        <div class="font-sans text-white text-4xl leading-none">100<span class="text-[#7EC8F7]">+</span></div>
+        <div class="text-[13px] text-white/55 mt-1">obsługiwanych firm</div>
+      </div>
+      <div>
+        <div class="font-sans text-white text-2xl leading-snug">CIT·CIT ESTOŃSKI·PIT·VAT·ZUS·KSEF</div>
+        <div class="text-[13px] text-white/55 mt-1">pełen zakres usług</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- USŁUGI -->
+<section id="uslugi" class="py-24 px-5 bg-white">
+  <div class="max-w-6xl mx-auto">
+    <div class="inline-flex items-center gap-2 text-[11px] font-bold uppercase tracking-widest text-sky mb-3.5 before:content-[''] before:block before:w-5 before:h-0.5 before:bg-sky before:rounded-sm">Co oferujemy</div>
+    <h2 class="font-sans text-navy leading-[1.15]" style="font-size:clamp(30px,4vw,46px)">Usługi księgowe<br/>dla Twojej firmy</h2>
+    <p class="text-[16px] text-muted mt-3 max-w-[500px] leading-relaxed">Obsługujemy firmy każdej wielkości — od JDG po spółki z o.o. Kompleksowo i bez zbędnych formalności.</p>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 mt-14">
+
+      <!-- Card 1 -->
+      <div class="service-card card-blue">
+        <div class="service-icon-wrap w-16 h-16 rounded-2xl flex items-center justify-center mb-5 transition-transform duration-300">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+        </div>
+        <div class="text-[17px] font-bold text-navy mb-2.5">Pełna księgowość</div>
+        <div class="text-[14px] text-muted leading-relaxed">Ewidencja zdarzeń gospodarczych, sprawozdania finansowe i deklaracje podatkowe zgodne z aktualnymi przepisami.</div>
+        <div class="service-arrow-link">Dowiedz się więcej <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 7h8M8 4l3 3-3 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="service-card card-teal">
+        <div class="service-icon-wrap w-16 h-16 rounded-2xl flex items-center justify-center mb-5 transition-transform duration-300">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg>
+        </div>
+        <div class="text-[17px] font-bold text-navy mb-2.5">Kadry i płace</div>
+        <div class="text-[14px] text-muted leading-relaxed">Obsługa pracownicza, naliczanie wynagrodzeń, ZUS, PPK oraz kompleksowa dokumentacja kadrowa.</div>
+        <div class="service-arrow-link">Dowiedz się więcej <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 7h8M8 4l3 3-3 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="service-card card-violet">
+        <div class="service-icon-wrap w-16 h-16 rounded-2xl flex items-center justify-center mb-5 transition-transform duration-300">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+        </div>
+        <div class="text-[17px] font-bold text-navy mb-2.5">Podatkowa KPiR</div>
+        <div class="text-[14px] text-muted leading-relaxed">Uproszczona ewidencja dla JDG i spółek — szybka i przejrzysta obsługa bez nadmiarowych formalności.</div>
+        <div class="service-arrow-link">Dowiedz się więcej <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 7h8M8 4l3 3-3 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></div>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="service-card card-orange">
+        <div class="service-icon-wrap w-16 h-16 rounded-2xl flex items-center justify-center mb-5 transition-transform duration-300">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+        </div>
+        <div class="text-[17px] font-bold text-navy mb-2.5">Doradztwo podatkowe</div>
+        <div class="text-[14px] text-muted leading-relaxed">Optymalizacja podatkowa, wybór formy opodatkowania i wsparcie podczas kontroli skarbowej.</div>
+        <div class="service-arrow-link">Dowiedz się więcej <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 7h8M8 4l3 3-3 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></div>
+      </div>
+
+      <!-- Card 5 -->
+      <div class="service-card card-green">
+        <div class="service-icon-wrap w-16 h-16 rounded-2xl flex items-center justify-center mb-5 transition-transform duration-300">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>
+        </div>
+        <div class="text-[17px] font-bold text-navy mb-2.5">Rozliczenie VAT</div>
+        <div class="text-[14px] text-muted leading-relaxed">Miesięczne i kwartalne deklaracje VAT, pliki JPK oraz rejestr VAT sprzedaży i zakupów.</div>
+        <div class="service-arrow-link">Dowiedz się więcej <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 7h8M8 4l3 3-3 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></div>
+      </div>
+
+      <!-- Card 6 -->
+      <div class="service-card card-gold">
+        <div class="service-icon-wrap w-16 h-16 rounded-2xl flex items-center justify-center mb-5 transition-transform duration-300">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        </div>
+        <div class="text-[17px] font-bold text-navy mb-2.5">Zakładanie firm</div>
+        <div class="text-[14px] text-muted leading-relaxed">Pomoc przy rejestracji działalności, wyborze formy prawnej i pierwszych formalnościach w US i ZUS.</div>
+        <div class="service-arrow-link">Dowiedz się więcej <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 7h8M8 4l3 3-3 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+
+<!-- DLACZEGO MY -->
+<section id="dlaczego" class="py-24 px-5 relative overflow-hidden" style="background:linear-gradient(160deg,#0F2D5E 0%,#1a3d70 100%)">
+  <div class="absolute inset-0 opacity-[.025]" style="background-image:url('data:image/svg+xml,%3Csvg width=60 height=60 viewBox=0 0 60 60 xmlns=http://www.w3.org/2000/svg%3E%3Cg fill=none fill-rule=evenodd%3E%3Cg fill=%23ffffff fill-opacity=1%3E%3Cpath d=M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')"></div>
+  <div class="max-w-6xl mx-auto relative z-10">
+    <div class="inline-flex items-center gap-2 text-[11px] font-bold uppercase tracking-widest text-[#7EC8F7] mb-3.5 before:content-[''] before:block before:w-5 before:h-0.5 before:bg-[#7EC8F7] before:rounded-sm">Dlaczego my?</div>
+    <h2 class="font-sans text-white leading-[1.15]" style="font-size:clamp(30px,4vw,46px)">Profesjonalizm,<br/>który możesz sprawdzić</h2>
+    <p class="text-[16px] text-white/60 mt-3 max-w-[500px] leading-relaxed">Dajemy Ci pewność, że finanse Twojej firmy są w dobrych rękach.</p>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-5 mt-14">
+
+      <div class="flex gap-5 bg-white/[.06] border border-white/10 rounded-2xl p-8 backdrop-blur-sm hover:bg-white/10 hover:border-white/20 hover:-translate-y-1 transition-all">
+        <div class="w-14 h-14 rounded-2xl flex items-center justify-center flex-shrink-0 bg-sky/25">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#7EC8F7" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11"/></svg>
+        </div>
+        <div>
+          <div class="text-[16px] font-bold text-white mb-2">Certyfikowani księgowi</div>
+          <div class="text-[14px] text-white/60 leading-relaxed">Uprawnieni do usługowego prowadzenia ksiąg rachunkowych — pełna odpowiedzialność zawodowa.</div>
+        </div>
+      </div>
+
+      <div class="flex gap-5 bg-white/[.06] border border-white/10 rounded-2xl p-8 backdrop-blur-sm hover:bg-white/10 hover:border-white/20 hover:-translate-y-1 transition-all">
+        <div class="w-14 h-14 rounded-2xl flex items-center justify-center flex-shrink-0 bg-teal/25">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#2DD4BF" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg>
+        </div>
+        <div>
+          <div class="text-[16px] font-bold text-white mb-2">Ubezpieczenie OC</div>
+          <div class="text-[14px] text-white/60 leading-relaxed">Pełna ochrona na wypadek błędów i zaniedbań — Twoje finanse są u nas bezpieczne.</div>
+        </div>
+      </div>
+
+      <div class="flex gap-5 bg-white/[.06] border border-white/10 rounded-2xl p-8 backdrop-blur-sm hover:bg-white/10 hover:border-white/20 hover:-translate-y-1 transition-all">
+        <div class="w-14 h-14 rounded-2xl flex items-center justify-center flex-shrink-0 bg-violet/25">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#A78BFA" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg>
+        </div>
+        <div>
+          <div class="text-[16px] font-bold text-white mb-2">Ochrona danych RODO</div>
+          <div class="text-[14px] text-white/60 leading-relaxed">Bezpieczne przetwarzanie danych Twoich pracowników i firmy zgodnie z przepisami RODO.</div>
+        </div>
+      </div>
+
+      <div class="flex gap-5 bg-white/[.06] border border-white/10 rounded-2xl p-8 backdrop-blur-sm hover:bg-white/10 hover:border-white/20 hover:-translate-y-1 transition-all">
+        <div class="w-14 h-14 rounded-2xl flex items-center justify-center flex-shrink-0 bg-accent/25">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#FB923C" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/><line x1="12" y1="11" x2="12" y2="14"/><line x1="10" y1="13" x2="14" y2="13"/></svg>
+        </div>
+        <div>
+          <div class="text-[16px] font-bold text-white mb-2">Stały opiekun klienta</div>
+          <div class="text-[14px] text-white/60 leading-relaxed">Jeden dedykowany księgowy, który zna Twoją firmę — bez przerzucania między pracownikami.</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- KONTAKT -->
+<section id="kontakt" class="py-24 px-5 bg-off">
+  <div class="max-w-[860px] mx-auto text-center">
+    <div class="inline-flex items-center justify-center gap-2 text-[11px] font-bold uppercase tracking-widest text-sky mb-3.5 before:content-[''] before:block before:w-5 before:h-0.5 before:bg-sky before:rounded-sm">Kontakt</div>
+    <h2 class="font-sans text-navy leading-[1.15]" style="font-size:clamp(30px,4vw,46px)">Porozmawiajmy<br/>o Twoich finansach</h2>
+    <p class="text-[16px] text-muted mt-3 mx-auto max-w-[440px] leading-relaxed">Pierwsza konsultacja jest bezpłatna. Zadzwoń, napisz maila lub wpadnij do nas osobiście.</p>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mt-12">
+      <a href="tel:+48655204102" class="flex flex-col items-center text-center gap-4 border border-border rounded-2xl px-6 py-8 bg-white hover:border-sky hover:-translate-y-1 hover:shadow-xl hover:shadow-sky/10 transition-all">
+        <div class="w-16 h-16 rounded-2xl bg-[#EFF6FF] flex items-center justify-center">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#1B4D8A" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M5 4h4l1.5 4-2 1.5a11 11 0 005 5L15 12.5l4 1.5v4a1 1 0 01-1 1A17 17 0 014 5a1 1 0 011-1z"/>
+          </svg>
+        </div>
+        <div class="text-[12px] text-muted font-medium">Zadzwoń</div>
+        <div class="text-[16px] font-bold text-navy -mt-3">+48 655 204 102</div>
+        <div class="text-[13px] text-muted -mt-3">pon–pt 8:00–17:00</div>
+      </a>
+
+      <a href="mailto:biuro@profitax.pl" class="flex flex-col items-center text-center gap-4 border border-border rounded-2xl px-6 py-8 bg-white hover:border-sky hover:-translate-y-1 hover:shadow-xl hover:shadow-sky/10 transition-all">
+        <div class="w-16 h-16 rounded-2xl bg-[#F0FDFB] flex items-center justify-center">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#0EA5A0" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        </div>
+        <div class="text-[12px] text-muted font-medium">Napisz e-mail</div>
+        <div class="text-[16px] font-bold text-navy -mt-3">biuro@profitax.pl</div>
+        <div class="text-[13px] text-muted -mt-3">odpiszemy do 24h</div>
+      </a>
+
+      <div class="flex flex-col items-center text-center gap-4 border border-border rounded-2xl px-6 py-8 bg-white hover:border-sky hover:-translate-y-1 hover:shadow-xl hover:shadow-sky/10 transition-all">
+        <div class="w-16 h-16 rounded-2xl bg-[#FFFBEB] flex items-center justify-center">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#D97706" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        </div>
+        <div class="text-[12px] text-muted font-medium">Odwiedź nas</div>
+        <div class="text-[16px] font-bold text-navy -mt-3">ul. Doktora Bronisława Świderskiego 13, 64-100 Leszno</div>
+        <div class="text-[13px] text-muted -mt-3">64-100 Leszno</div>
+      </div>
+    </div>
+
+    <div class="mt-9 bg-white border border-border rounded-2xl px-7 py-5 text-[14px] text-muted">
+      Godziny otwarcia: <strong class="text-navy">poniedziałek – piątek, 7:00 – 15:00</strong>
+    </div>
+
+    <div class="mt-8">
+      <a href="tel:+48655204102" class="inline-flex items-center gap-2 bg-gradient-to-br from-blue to-sky text-white px-8 py-3.5 rounded-[10px] text-[15px] font-semibold shadow-md shadow-blue/30 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-blue/40 transition-all">
+        Zadzwoń teraz — to nic nie kosztuje
+        <svg width="16" height="16" viewBox="0 0 14 14" fill="none"><path d="M3 7h8M8 4l3 3-3 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+
+<!-- FOOTER -->
+<footer class="bg-navy px-5 pt-12 pb-8">
+  <div class="max-w-6xl mx-auto">
+    <div class="flex flex-wrap justify-between items-start gap-8 pb-8 border-b border-white/10">
+      <div>
+        <div class="flex items-center gap-2.5 mb-2.5">
+          <div class="w-9 h-9 rounded-[9px] bg-gradient-to-br from-blue to-sky flex items-center justify-center text-white text-xl font-bold">P</div>
+          <div class="text-[16px] font-bold text-white">Pro<span class="text-[#7EC8F7]">fitax</span></div>
+        </div>
+        <div class="text-[13px] text-white/45">Biuro rachunkowe · ul. Doktora Bronisława Świderskiego 13, 64-100 Leszno</div>
+      </div>
+      <div class="flex flex-wrap gap-6 items-center">
+        <a href="#uslugi" class="text-[13px] text-white/50 hover:text-[#7EC8F7] transition-colors">Usługi</a>
+        <a href="#dlaczego" class="text-[13px] text-white/50 hover:text-[#7EC8F7] transition-colors">Dlaczego my?</a>
+        <a href="#kontakt" class="text-[13px] text-white/50 hover:text-[#7EC8F7] transition-colors">Kontakt</a>
+        <a href="polityka_prywatnosci.html" class="text-[13px] text-white/50 hover:text-[#7EC8F7] transition-colors">Polityka prywatności</a>
+      </div>
+    </div>
+    <div class="pt-6 text-[12px] text-white/30">
+      © 2026 Profitax Biuro Rachunkowe. Wszelkie prawa zastrzeżone.
+    </div>
+  </div>
+</footer>
+
+
+<script>
+  const hamburger = document.getElementById('hamburger');
+  const menu = document.getElementById('mobile-menu');
+
+  function toggleMenu() {
+    const open = menu.classList.toggle('open');
+    hamburger.classList.toggle('open', open);
+  }
+  function closeMenu() {
+    menu.classList.remove('open');
+    hamburger.classList.remove('open');
+  }
+
+  function toggleFaq(btn) {
+    const item = btn.closest('.faq-item');
+    const isOpen = item.classList.contains('active');
+    document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('active'));
+    if (!isOpen) item.classList.add('active');
+  }
+
+  // Scroll-reveal for cards
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((e) => {
+      if (e.isIntersecting) {
+        const idx = Array.from(e.target.parentNode.children).indexOf(e.target);
+        e.target.style.animationDelay = (idx * 0.08) + 's';
+        e.target.classList.add('fade-up');
+        observer.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.12 });
+
+  document.querySelectorAll('.service-card, .why-card, .contact-card').forEach(el => {
+    el.style.opacity = '0';
+    observer.observe(el);
+  });
+</script>
+</body>
+</html>

@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Polityka Prywatności – Profitax Biuro Rachunkowe Leszno</title>
+  <meta name="robots" content="noindex, follow"/>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&display=swap" rel="stylesheet"/>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            navy:   '#0F2D5E',
+            blue:   '#1B4D8A',
+            sky:    '#2E80D8',
+            off:    '#F5F7FA',
+            border: '#E2E8F0',
+            text:   '#1E293B',
+            muted:  '#64748B',
+          },
+          fontFamily: { sans: ['DM Sans', 'sans-serif'] }
+        }
+      }
+    }
+  </script>
+  <style>
+    html { scroll-behavior: smooth; }
+    .nav-link { position: relative; }
+    .nav-link::after { content:''; position:absolute; bottom:-4px; left:0; width:0; height:2px; background:#2E80D8; border-radius:2px; transition:width .25s; }
+    .nav-link:hover::after { width:100%; }
+    .hamburger span { display:block; width:22px; height:2px; background:#0F2D5E; border-radius:2px; transition:transform .25s, opacity .2s; }
+    .hamburger.open span:nth-child(1) { transform:translateY(7px) rotate(45deg); }
+    .hamburger.open span:nth-child(2) { opacity:0; transform:scaleX(0); }
+    .hamburger.open span:nth-child(3) { transform:translateY(-7px) rotate(-45deg); }
+    .mobile-menu { max-height:0; overflow:hidden; transition:max-height .35s ease, opacity .25s ease; opacity:0; }
+    .mobile-menu.open { max-height:500px; opacity:1; }
+
+    .prose h2 { font-size:15px; font-weight:700; color:#0F2D5E; margin-top:36px; margin-bottom:12px; padding-bottom:8px; border-bottom:1.5px solid #E2E8F0; }
+    .prose p { font-size:14px; color:#64748B; line-height:1.75; margin-bottom:12px; }
+    .prose ul { margin:8px 0 14px 0; display:flex; flex-direction:column; gap:6px; }
+    .prose ul li { font-size:14px; color:#64748B; line-height:1.7; padding-left:16px; position:relative; }
+    .prose ul li::before { content:'–'; position:absolute; left:0; color:#2E80D8; font-weight:600; }
+    .prose ul ul { margin-top:6px; margin-left:16px; }
+    .prose ul ul li::before { content:'·'; color:#94A3B8; }
+    .prose strong { color:#1E293B; font-weight:600; }
+    .prose a { color:#2E80D8; text-decoration:underline; text-underline-offset:2px; }
+    .prose a:hover { color:#0F2D5E; }
+    .prose small { font-size:12px; color:#94A3B8; display:block; margin-top:2px; }
+  </style>
+</head>
+<body class="font-sans text-text bg-off leading-relaxed">
+
+<!-- NAVBAR -->
+<header>
+  <nav class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-border shadow-sm">
+    <div class="max-w-6xl mx-auto px-5 flex items-center justify-between h-[68px]">
+      <a href="index.html" class="flex items-center gap-2.5">
+        <div class="w-10 h-10 rounded-[10px] bg-gradient-to-br from-blue to-sky flex items-center justify-center text-white text-[22px] font-bold shadow-lg shadow-blue/30">P</div>
+        <div class="font-bold text-[17px] tracking-tight">Pro<span class="text-sky">fitax</span></div>
+      </a>
+      <div class="hidden md:flex items-center gap-8">
+        <a href="index.html#uslugi" class="nav-link text-sm font-medium text-muted hover:text-navy transition-colors">Usługi</a>
+        <a href="index.html#dlaczego" class="nav-link text-sm font-medium text-muted hover:text-navy transition-colors">Dlaczego my?</a>
+        <a href="index.html#kontakt" class="nav-link text-sm font-medium text-muted hover:text-navy transition-colors">Kontakt</a>
+      </div>
+      <div class="hidden md:flex items-center gap-3">
+        <span class="flex items-center gap-1.5 text-[13px] font-semibold text-muted">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h4l1.5 4-2 1.5a11 11 0 005 5L15 12.5l4 1.5v4a1 1 0 01-1 1A17 17 0 014 5a1 1 0 011-1z"/></svg>
+          +48 655 204 102
+        </span>
+        <a href="index.html#kontakt" class="inline-flex items-center gap-1.5 px-5 py-2.5 rounded-[10px] bg-gradient-to-br from-blue to-sky text-white text-sm font-semibold shadow-md shadow-blue/30 hover:-translate-y-0.5 hover:shadow-lg transition-all">
+          Bezpłatna konsultacja
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 7h8M8 4l3 3-3 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+        </a>
+      </div>
+      <button class="hamburger md:hidden flex flex-col justify-center items-center gap-[5px] w-10 h-10 bg-transparent border-none cursor-pointer rounded-lg hover:bg-off transition-colors" id="hamburger" aria-label="Menu" onclick="toggleMenu()">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+  <div class="mobile-menu bg-white border-b border-border" id="mobile-menu">
+    <div class="max-w-6xl mx-auto px-5 py-2 pb-4 flex flex-col gap-0.5">
+      <a href="index.html#uslugi" onclick="closeMenu()" class="px-3 py-2.5 rounded-lg text-[15px] font-medium text-text hover:bg-blue-50 hover:text-sky transition-colors">Usługi</a>
+      <a href="index.html#dlaczego" onclick="closeMenu()" class="px-3 py-2.5 rounded-lg text-[15px] font-medium text-text hover:bg-blue-50 hover:text-sky transition-colors">Dlaczego my?</a>
+      <a href="index.html#kontakt" onclick="closeMenu()" class="px-3 py-2.5 rounded-lg text-[15px] font-medium text-text hover:bg-blue-50 hover:text-sky transition-colors">Kontakt</a>
+      <div class="h-px bg-border my-2"></div>
+      <a href="tel:+48655204102" class="text-[14px] text-muted px-3 py-2">📞 +48 655 204 102</a>
+      <a href="index.html#kontakt" class="inline-flex justify-center items-center gap-2 px-5 py-2.5 rounded-[10px] bg-gradient-to-br from-blue to-sky text-white text-sm font-semibold mt-1">Bezpłatna konsultacja</a>
+    </div>
+  </div>
+</header>
+
+<!-- PAGE HEADER -->
+<div class="bg-white border-b border-border py-10 px-5">
+  <div class="max-w-3xl mx-auto">
+    <div class="flex items-center gap-2 text-[12px] text-muted mb-4">
+      <a href="index.html" class="hover:text-sky transition-colors">Strona główna</a>
+      <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M4 2l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+      <span class="text-navy font-medium">Polityka Prywatności</span>
+    </div>
+    <div class="inline-flex items-center gap-2 text-[11px] font-bold uppercase tracking-widest text-sky mb-3 before:content-[''] before:block before:w-5 before:h-0.5 before:bg-sky before:rounded-sm">Dokument prawny</div>
+    <h1 class="font-sans text-navy text-3xl font-bold leading-tight">Polityka Prywatności</h1>
+    <p class="text-muted text-sm mt-2">Ostatnia aktualizacja: styczeń 2025 · Profitax Biuro Rachunkowe</p>
+  </div>
+</div>
+
+<!-- CONTENT -->
+<div class="py-12 px-5">
+  <div class="max-w-3xl mx-auto">
+
+    <!-- Info box -->
+    <div class="bg-[#EFF6FF] border border-sky/20 rounded-2xl p-6 mb-8 flex gap-4">
+      <div class="flex-shrink-0 w-10 h-10 rounded-xl bg-sky/15 flex items-center justify-center">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2E80D8" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+      </div>
+      <div>
+        <div class="text-[13px] font-semibold text-navy mb-1">O tym dokumencie</div>
+        <p class="text-[13px] text-muted leading-relaxed">Poniższa Polityka Prywatności określa <strong>zasady zapisywania i uzyskiwania dostępu do danych na Urządzeniach Użytkowników</strong> korzystających z Serwisu oraz <strong>zasady gromadzenia i przetwarzania danych osobowych Użytkowników</strong> podanych dobrowolnie za pośrednictwem narzędzi dostępnych w Serwisie.</p>
+      </div>
+    </div>
+
+    <!-- Legal content -->
+    <div class="bg-white rounded-2xl border border-border p-8 md:p-10 prose">
+
+      <h2>§1 Definicje</h2>
+      <ul>
+        <li><strong>Serwis</strong> – serwis internetowy „Profitax" działający pod adresem http://profitax.eu/</li>
+        <li><strong>Serwis zewnętrzny</strong> – serwisy internetowe partnerów, usługodawców lub usługobiorców współpracujących z Administratorem</li>
+        <li><strong>Administrator Serwisu / Danych</strong> – Administratorem Serwisu oraz Administratorem Danych jest firma Profitax, prowadząca działalność pod adresem: ul. Słowiańska 54, 64-100 Leszno, świadcząca usługi drogą elektroniczną za pośrednictwem Serwisu</li>
+        <li><strong>Użytkownik</strong> – osoba fizyczna, dla której Administrator świadczy usługi drogą elektroniczną za pośrednictwem Serwisu</li>
+        <li><strong>Urządzenie</strong> – elektroniczne urządzenie wraz z oprogramowaniem, za pośrednictwem którego Użytkownik uzyskuje dostęp do Serwisu</li>
+        <li><strong>Cookies (ciasteczka)</strong> – dane tekstowe gromadzone w formie plików zamieszczanych na Urządzeniu Użytkownika</li>
+        <li><strong>RODO</strong> – Rozporządzenie Parlamentu Europejskiego i Rady (UE) 2016/679 z dnia 27 kwietnia 2016 r. w sprawie ochrony osób fizycznych w związku z przetwarzaniem danych osobowych</li>
+        <li><strong>Dane osobowe</strong> – informacje o zidentyfikowanej lub możliwej do zidentyfikowania osobie fizycznej</li>
+        <li><strong>Przetwarzanie</strong> – operacja lub zestaw operacji wykonywanych na danych osobowych w sposób zautomatyzowany lub niezautomatyzowany</li>
+        <li><strong>Zgoda</strong> – dobrowolne, konkretne, świadome i jednoznaczne okazanie woli, którym osoba przyzwala na przetwarzanie dotyczących jej danych osobowych</li>
+        <li><strong>Anonimizacja</strong> – nieodwracalny proces operacji na danych, który uniemożliwia identyfikację lub powiązanie danego rekordu z konkretnym użytkownikiem</li>
+      </ul>
+
+      <h2>§2 Inspektor Ochrony Danych</h2>
+      <p>Na podstawie Art. 37 RODO, Administrator nie powołał Inspektora Ochrony Danych.</p>
+      <p>W sprawach dotyczących przetwarzania danych, w tym danych osobowych, należy kontaktować się bezpośrednio z Administratorem pod adresem: <a href="mailto:biuro@profitax.pl">biuro@profitax.pl</a></p>
+
+      <h2>§3 Rodzaje Plików Cookies</h2>
+      <ul>
+        <li><strong>Cookies wewnętrzne</strong> – pliki zamieszczane i odczytywane z Urządzenia Użytkownika przez system teleinformatyczny Serwisu</li>
+        <li><strong>Cookies zewnętrzne</strong> – pliki zamieszczane i odczytywane z Urządzenia Użytkownika przez systemy teleinformatyczne Serwisów zewnętrznych</li>
+        <li><strong>Cookies sesyjne</strong> – pliki zamieszczane podczas jednej sesji danego Urządzenia; po zakończeniu sesji pliki są usuwane z Urządzenia Użytkownika</li>
+        <li><strong>Cookies trwałe</strong> – pliki zamieszczane do momentu ich ręcznego usunięcia przez Użytkownika</li>
+      </ul>
+
+      <h2>§4 Bezpieczeństwo składowania danych</h2>
+      <ul>
+        <li><strong>Mechanizmy składowania i odczytu plików Cookie</strong> – realizowane są poprzez wbudowane mechanizmy przeglądarek internetowych i nie pozwalają na pobieranie innych danych z Urządzenia Użytkownika ani danych osobowych.</li>
+        <li><strong>Cookie wewnętrzne</strong> – zastosowane przez Administratora pliki Cookie są bezpieczne dla Urządzeń Użytkowników i nie zawierają skryptów mogących zagrażać bezpieczeństwu danych.</li>
+        <li><strong>Cookie zewnętrzne</strong> – Administrator dokonuje wszelkich możliwych działań w celu weryfikacji i doboru partnerów serwisu w kontekście bezpieczeństwa Użytkowników.</li>
+        <li><strong>Kontrola plików Cookie</strong> – Użytkownik może w dowolnym momencie zmienić ustawienia dotyczące plików Cookies w ustawieniach przeglądarki:
+          <ul>
+            <li><a href="https://support.google.com/accounts/answer/61416?hl=pl" rel="nofollow external">Chrome</a></li>
+            <li><a href="https://help.opera.com/pl/latest/web-preferences/" rel="nofollow external">Opera</a></li>
+            <li><a href="https://support.mozilla.org/pl/kb/blokowanie-ciasteczek" rel="nofollow external">Firefox</a></li>
+            <li><a href="https://support.microsoft.com/pl-pl/help/4027947/microsoft-edge-delete-cookies" rel="nofollow external">Edge</a></li>
+            <li><a href="https://support.apple.com/pl-pl/guide/safari/sfri11471/mac" rel="nofollow external">Safari</a></li>
+          </ul>
+        </li>
+        <li><strong>Przechowywanie danych osobowych</strong> – Administrator dokonuje wszelkich starań, by przetwarzane dane osobowe były bezpieczne, a dostęp do nich był ograniczony i realizowany zgodnie z ich przeznaczeniem.</li>
+      </ul>
+
+      <h2>§5 Cele do których wykorzystywane są pliki Cookie</h2>
+      <ul>
+        <li>Usprawnienie i ułatwienie dostępu do Serwisu</li>
+        <li>Personalizacja Serwisu dla Użytkowników</li>
+        <li>Analiza statystyk odwiedzin Serwisu</li>
+      </ul>
+
+      <h2>§6 Cele i podstawy przetwarzania danych osobowych</h2>
+      <p>Dane osobowe Użytkowników są przetwarzane wyłącznie w zakresie niezbędnym do funkcjonowania Serwisu oraz kontaktu z Użytkownikiem.</p>
+
+      <ul>
+        <li>obsługi zapytań kierowanych przez e-mail lub telefon (art. 6 ust. 1 lit. b RODO)</li>
+        <li>zapewnienia bezpieczeństwa Serwisu oraz jego prawidłowego działania (art. 6 ust. 1 lit. f RODO)</li>
+        <li>ewentualnego ustalenia, dochodzenia lub obrony roszczeń (art. 6 ust. 1 lit. f RODO)</li>
+      </ul>
+
+      <p>Podanie danych jest dobrowolne, jednak niezbędne do nawiązania kontaktu z Administratorem.</p>
+
+      <h2>§7 Pliki Cookies Serwisów zewnętrznych</h2>
+      <p>Administrator w Serwisie może wykorzystywać skrypty javascript i komponenty webowe partnerów, którzy mogą umieszczać własne pliki cookies na Urządzeniu Użytkownika. Pamiętaj, że w ustawieniach swojej przeglądarki możesz sam decydować o dozwolonych plikach cookies.</p>
+      <p>Usługi świadczone przez podmioty trzecie są poza kontrolą Administratora. Podmioty te mogą w każdej chwili zmienić swoje warunki świadczenia usług, polityki prywatności oraz sposób wykorzystywania plików cookie.</p>
+      <p>Serwis wykorzystuje narzędzie CookieYes do zarządzania zgodami Użytkowników na stosowanie plików cookies. Użytkownik może w każdej chwili zmienić swoje preferencje dotyczące cookies za pomocą dostępnego banera.</p>
+
+      <h2>§8 Rodzaje gromadzonych danych</h2>
+      <p>Serwis gromadzi dane o Użytkownikach. Część danych jest gromadzona automatycznie i anonimowo, a część to dane osobowe podane dobrowolnie przez Użytkowników.</p>
+      <p><strong>Dane gromadzone podczas kontaktu:</strong></p>
+      <ul>
+        <li>Adres e-mail (w przypadku kontaktu mailowego)</li>
+        <li>Numer telefonu (w przypadku kontaktu telefonicznego)</li>
+        <li>Adres IP (zbierany automatycznie przez serwer)</li>
+      </ul>
+
+      <h2>§8A Źródło danych</h2>
+      <p>Dane osobowe są pozyskiwane bezpośrednio od Użytkowników podczas kontaktu z Administratorem lub automatycznie podczas korzystania z Serwisu (np. adres IP).</p>
+
+      <h2>§9 Dostęp do danych osobowych przez podmioty trzecie</h2>
+      <p>Dane osobowe mogą być udostępniane podmiotom współpracującym z Administratorem wyłącznie w zakresie niezbędnym do realizacji usług.</p>
+
+      <ul>
+        <li>dostawcom usług hostingowych</li>
+        <li>dostawcom poczty elektronicznej</li>
+      </ul>
+
+      <p>Dane nie są sprzedawane ani udostępniane w celach marketingowych podmiotom trzecim.</p>
+      <p>Wszystkie dane przetwarzane są na terenie Europejskiego Obszaru Gospodarczego.</p>
+
+      <h2>§10 Sposób przetwarzania danych osobowych</h2>
+      <p><strong>Dane osobowe podane dobrowolnie przez Użytkowników:</strong></p>
+      <ul>
+        <li>Dane osobowe nie będą przekazywane poza Unię Europejską</li>
+        <li>Dane osobowe nie będą wykorzystywane do zautomatyzowanego podejmowania decyzji (profilowania)</li>
+        <li>Dane osobowe nie będą odsprzedawane podmiotom trzecim</li>
+      </ul>
+
+      <h2>§11 Podstawy prawne przetwarzania danych osobowych</h2>
+      <p>Serwis gromadzi i przetwarza dane Użytkowników na podstawie:</p>
+      <ul>
+        <li>Rozporządzenia Parlamentu Europejskiego i Rady (UE) 2016/679 (RODO):
+          <ul>
+            <li>art. 6 ust. 1 lit. a – <small>osoba wyraziła zgodę na przetwarzanie swoich danych osobowych</small></li>
+            <li>art. 6 ust. 1 lit. b – <small>przetwarzanie jest niezbędne do wykonania umowy lub podjęcia działań przed jej zawarciem</small></li>
+            <li>art. 6 ust. 1 lit. f – <small>przetwarzanie jest niezbędne do celów wynikających z prawnie uzasadnionych interesów Administratora</small></li>
+          </ul>
+        </li>
+        <li>Ustawa z dnia 10 maja 2018 r. o ochronie danych osobowych (Dz.U. 2018 poz. 1000)</li>
+        <li>Ustawa z dnia 16 lipca 2004 r. Prawo telekomunikacyjne (Dz.U. 2004 nr 171 poz. 1800)</li>
+      </ul>
+
+      <h2>§12 Okres przetwarzania danych osobowych</h2>
+      <p><strong>Dane osobowe podane dobrowolnie</strong> są przechowywane wyłącznie przez okres niezbędny do realizacji usługi lub obsługi zapytania, nie dłużej niż 3 lata od ostatniego kontaktu, chyba że przepisy prawa wymagają dłuższego okresu przechowywania.</p>
+      <p><strong>Dane anonimowe</strong> gromadzone automatycznie (statystyki) są przechowywane przez czas nieoznaczony w celach analitycznych.</p>
+
+      <h2>§13 Prawa Użytkowników związane z przetwarzaniem danych osobowych</h2>
+      <ul>
+        <li><strong>Prawo dostępu do danych osobowych</strong> – prawo uzyskania dostępu do swoich danych osobowych, realizowane na żądanie złożone do Administratora</li>
+        <li><strong>Prawo do sprostowania danych osobowych</strong> – prawo żądania niezwłocznego sprostowania danych nieprawidłowych lub uzupełnienia niekompletnych danych</li>
+        <li><strong>Prawo do usunięcia danych osobowych</strong> – prawo żądania niezwłocznego usunięcia danych osobowych („prawo do bycia zapomnianym")</li>
+        <li><strong>Prawo do ograniczenia przetwarzania</strong> – prawo ograniczenia przetwarzania danych w przypadkach wskazanych w art. 18 RODO</li>
+        <li><strong>Prawo do przenoszenia danych</strong> – prawo uzyskania danych w ustrukturyzowanym, powszechnie używanym formacie nadającym się do odczytu maszynowego</li>
+        <li><strong>Prawo wniesienia sprzeciwu</strong> – prawo wniesienia sprzeciwu wobec przetwarzania danych w przypadkach określonych w art. 21 RODO</li>
+        <li><strong>Prawo wniesienia skargi</strong> – prawo wniesienia skargi do Prezesa Urzędu Ochrony Danych Osobowych (PUODO)</li>
+        <li><strong>Prawo cofnięcia zgody</strong> – w przypadku przetwarzania danych na podstawie zgody, Użytkownik ma prawo cofnąć ją w dowolnym momencie bez wpływu na zgodność z prawem przetwarzania dokonanego przed jej cofnięciem</li>
+      </ul>
+
+      <h2>§14 Kontakt do Administratora</h2>
+      <ul>
+        <li><strong>Adres pocztowy</strong> – Profitax Biuro Rachunkowe, ul. Słowiańska 54, 64-100 Leszno</li>
+        <li><strong>Adres poczty elektronicznej</strong> – <a href="mailto:biuro@profitax.pl">biuro@profitax.pl</a></li>
+        <li><strong>Połączenie telefoniczne</strong> – <a href="tel:+48655204102">+48 655 204 102</a></li>
+      </ul>
+
+      <h2>§15 Wymagania Serwisu</h2>
+      <ul>
+        <li>Ograniczenie zapisu i dostępu do plików Cookie na Urządzeniu Użytkownika może spowodować nieprawidłowe działanie niektórych funkcji Serwisu.</li>
+        <li>Administrator nie ponosi odpowiedzialności za nieprawidłowo działające funkcje Serwisu w przypadku gdy Użytkownik ograniczy możliwość zapisywania i odczytu plików Cookie.</li>
+      </ul>
+
+      <h2>§16 Linki zewnętrzne</h2>
+      <p>W Serwisie mogą znajdować się odnośniki do witryn zewnętrznych, z którymi Administrator nie współpracuje. Administrator nie ponosi odpowiedzialności za zawartość znajdującą się poza Serwisem.</p>
+
+      <h2>§17 Zmiany w Polityce Prywatności</h2>
+      <ul>
+        <li>Administrator zastrzega sobie prawo do zmiany niniejszej Polityki Prywatności bez konieczności informowania Użytkowników w zakresie stosowania danych anonimowych lub plików Cookie.</li>
+        <li>Wprowadzone zmiany w Polityce Prywatności będą publikowane na tej podstronie Serwisu.</li>
+        <li>Wprowadzone zmiany wchodzą w życie z chwilą ich publikacji.</li>
+      </ul>
+
+    </div>
+
+    <!-- Back -->
+    <div class="mt-8 flex items-center gap-4">
+      <a href="index.html" class="inline-flex items-center gap-2 text-sm font-medium text-muted hover:text-sky transition-colors">
+        <svg width="16" height="16" viewBox="0 0 14 14" fill="none"><path d="M11 7H3M6 4L3 7l3 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+        Wróć na stronę główną
+      </a>
+      <span class="text-border">|</span>
+      <a href="index.html#kontakt" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-[10px] bg-gradient-to-br from-blue to-sky text-white text-sm font-semibold shadow-md shadow-blue/30 hover:-translate-y-0.5 transition-all">
+        Kontakt
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 7h8M8 4l3 3-3 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer class="bg-navy px-5 pt-12 pb-8 mt-4">
+  <div class="max-w-6xl mx-auto">
+    <div class="flex flex-wrap justify-between items-start gap-8 pb-8 border-b border-white/10">
+      <div>
+        <div class="flex items-center gap-2.5 mb-2.5">
+          <div class="w-9 h-9 rounded-[9px] bg-gradient-to-br from-blue to-sky flex items-center justify-center text-white text-xl font-bold">P</div>
+          <div class="text-[16px] font-bold text-white">Pro<span class="text-[#7EC8F7]">fitax</span></div>
+        </div>
+        <div class="text-[13px] text-white/45">Biuro rachunkowe · ul. Doktora Bronisława Świderskiego 13, 64-100 Leszno</div>
+      </div>
+      <div class="flex flex-wrap gap-6 items-center">
+        <a href="index.html#uslugi" class="text-[13px] text-white/50 hover:text-[#7EC8F7] transition-colors">Usługi</a>
+        <a href="index.html#dlaczego" class="text-[13px] text-white/50 hover:text-[#7EC8F7] transition-colors">Dlaczego my?</a>
+        <a href="index.html#kontakt" class="text-[13px] text-white/50 hover:text-[#7EC8F7] transition-colors">Kontakt</a>
+        <a href="polityka-prywatnosci.html" class="text-[13px] text-[#7EC8F7]">Polityka prywatności</a>
+      </div>
+    </div>
+    <div class="pt-6 text-[12px] text-white/30">© 2026 Profitax Biuro Rachunkowe. Wszelkie prawa zastrzeżone.</div>
+  </div>
+</footer>
+
+<script>
+  function toggleMenu() {
+    const menu = document.getElementById('mobile-menu');
+    const hamburger = document.getElementById('hamburger');
+    const open = menu.classList.toggle('open');
+    hamburger.classList.toggle('open', open);
+  }
+  function closeMenu() {
+    document.getElementById('mobile-menu').classList.remove('open');
+    document.getElementById('hamburger').classList.remove('open');
+  }
+</script>
+</body>
+</html>
