@@ -6,18 +6,18 @@
   <title>Profitax – Biuro Rachunkowe Leszno</title>
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 36 36'%3E%3Crect width='36' height='36' rx='9' fill='%231B4D8A'/%3E%3Ctext x='9' y='26' font-family='Georgia,serif' font-size='22' font-weight='700' fill='white'%3EP%3C/text%3E%3Ccircle cx='27' cy='10' r='3' fill='%237EC8F7'/%3E%3C/svg%3E"/>
   <meta name="description" content="Profitax – biuro rachunkowe w Lesznie. Pełna księgowość, kadry i płace, doradztwo podatkowe."/>
-  <!-- SEO & Social -->
-<meta name="keywords" content="biuro rachunkowe Leszno, księgowość Leszno, kadry płace Leszno, doradztwo podatkowe Leszno, KPiR Leszno"/>
-<meta name="robots" content="index, follow"/>
-<link rel="canonical" href="http://profitax.eu/"/>
-<meta property="og:type" content="website"/>
-<meta property="og:url" content="http://profitax.eu/"/>
-<meta property="og:title" content="Profitax – Biuro Rachunkowe Leszno"/>
-<meta property="og:description" content="Kompleksowa obsługa księgowa dla firm i przedsiębiorców w Lesznie. Pełna księgowość, kadry, doradztwo podatkowe."/>
-<meta property="og:image" content="http://profitax.eu/og-image.jpg"/>
-<meta property="og:locale" content="pl_PL"/>
-<meta property="og:site_name" content="Profitax"/>
-<meta name="twitter:card" content="summary_large_image"/>
+    <!-- SEO & Social -->
+  <meta name="keywords" content="biuro rachunkowe Leszno, księgowość Leszno, kadry płace Leszno, doradztwo podatkowe Leszno, KPiR Leszno"/>
+  <meta name="robots" content="index, follow"/>
+  <link rel="canonical" href="http://profitax.eu/"/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:url" content="http://profitax.eu/"/>
+  <meta property="og:title" content="Profitax – Biuro Rachunkowe Leszno"/>
+  <meta property="og:description" content="Kompleksowa obsługa księgowa dla firm i przedsiębiorców w Lesznie. Pełna księgowość, kadry, doradztwo podatkowe."/>
+  <meta property="og:image" content="http://profitax.eu/og-image.jpg"/>
+  <meta property="og:locale" content="pl_PL"/>
+  <meta property="og:site_name" content="Profitax"/>
+  <meta name="twitter:card" content="summary_large_image"/>
 
   <!-- Schema.org – rich snippets w Google -->
   <script type="application/ld+json">
@@ -51,12 +51,8 @@
     }
   }
   </script>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="preconnect" href="https://fonts.googleapis.com"/>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet"/>
-	<!-- Start cookieyes banner -->
-	<script id="cookieyes" type="text/javascript" src="https://cdn-cookieyes.com/client_data/f38bfa5fed5541925798c15b84eb2d40/script.js"></script>
-	<!-- End cookieyes banner -->
+  <link rel="preload" href="style.css" as="style">
+  <link rel="stylesheet" href="style.css">
   <script>
     tailwind.config = {
       theme: {
@@ -94,6 +90,7 @@
       from { opacity:0; transform: translateY(28px); }
       to   { opacity:1; transform: translateY(0); }
     }
+    .hero-section { min-height: 100svh; }
     .fade-up { opacity:0; animation: fadeUp .65s ease forwards; }
     .d1 { animation-delay:.1s; }
     .d2 { animation-delay:.22s; }
@@ -213,10 +210,16 @@
 
 
 <!-- HERO -->
-<section class="relative overflow-hidden min-h-[92vh] flex items-center">
-  <div class="absolute inset-0 z-0 bg-cover bg-center" style="background-image:url('https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1800&q=80')"></div>
-  <div class="absolute inset-0 z-10" style="background:linear-gradient(120deg,rgba(10,25,55,.88) 0%,rgba(15,45,94,.82) 45%,rgba(27,77,138,.55) 100%)"></div>
-  <div class="relative z-20 max-w-6xl mx-auto px-5 py-[100px] pb-20 w-full">
+<section class="hero-section relative overflow-hidden flex items-center">
+    <img 
+      src="hero.webp"
+      fetchpriority="high"
+      alt="Biuro Profitax Leszno"
+      class="absolute inset-0 w-full h-full object-cover object-left z-0"
+      style="object-position: 70% 50%; transform: scale(1)">
+    <div class="absolute inset-0 z-10" style="background:linear-gradient(120deg,rgba(10,25,55,.88) 0%,rgba(15,45,94,.82) 45%,rgba(27,77,138,.55) 100%)"></div>
+    <div class="relative z-20 max-w-6xl mx-auto px-5 py-[100px] pb-20 w-full">
+
     <!-- Badge -->
     <div class="fade-up d1 inline-flex items-center gap-2 bg-white/10 border border-white/20 backdrop-blur-sm rounded-full px-3.5 py-1.5 mb-7">
       <span class="dot-pulse w-2 h-2 rounded-full bg-green-400" style="box-shadow:0 0 0 3px rgba(74,222,128,.3)"></span>
@@ -505,5 +508,8 @@
     observer.observe(el);
   });
 </script>
+	<!-- Start cookieyes banner -->
+	<script id="cookieyes" type="text/javascript" src="https://cdn-cookieyes.com/client_data/f38bfa5fed5541925798c15b84eb2d40/script.js"></script>
+	<!-- End cookieyes banner -->
 </body>
 </html>
